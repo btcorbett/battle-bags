@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1"
+    >
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap" rel="stylesheet">
+    <title>Battle Bags</title>
+    <style media="screen">
+      body {
+        max-width: min(90vw, 1000px);
+        width: 100%;
+        margin: 0 auto;
+        text-align: center;
+        font-family: 'Kdam Thmor Pro', sans-serif;
+        border-left: 2px solid black;
+        border-right: 2px solid black;
+      }
+      header {
+        font-size: calc(100vw / 18);
+        padding: 0.25rem 0;
+        background-color: black;
+        color: white;
+      }
+      #battle-holder {
+        display: grid;
+        grid-template-columns: repeat(2, calc(50%));
+        border-bottom: 2px solid black;
+      }
+      #player-1, #player-2 {
+        outline: none;
+        border: none;
+        border-bottom: 2px solid black;
+        padding: 0.5em 0;
+        font-size: 40px;
+        font-weight: bolder;
+        text-align: center;
+        font-family: 'Kdam Thmor Pro', sans-serif;
+      }
+      #player-1 {
+        border-right: 1px solid black;
+      }
+      #player-2 {
+        border-left: 1px solid black;
+      }
+      #adjust-1, #adjust-2 {
+        display: inline-grid;
+        grid-template-columns: repeat(4, 1fr);
+        border-bottom: 2px solid black;
+      }
+      #adjust-1 {
+        border-right: 1px solid black;
+      }
+      #adjust-2 {
+        border-left: 1px solid black;
+      }
+      .adjust-icon {
+        text-align: center;
+        font-weight: bolder;
+        margin: 0 auto;
+        line-height: 0.9;
+        width: 80%;
+        cursor: pointer;
+        padding: 0.25em 0;
+      }
+      #score-1, #score-2 {
+        text-align: center;
+        font-size: 250px;
+        margin: 0 auto;
+      }
+      .adjust-img {
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+
+    <header>Battle Bags</header>
+
+    <section id='battle-holder'>
+      <input id='player-1' type="text" name="" placeholder="Player 1">
+      <input id='player-2' type="text" name="" placeholder="Player 2">
+      <div id='adjust-1'>
+        <span id="refresh-1" class='adjust-icon'>
+          <img class="adjust-img" src="./refresh.png" alt="">
+        </span>
+        <span id="bag_in-1" class='adjust-icon'>
+          <img class="adjust-img" src="./bag-in.png" alt="">
+        </span>
+      <span id="bag_on-1" class='adjust-icon'>
+        <img class="adjust-img" src="./bag-on.png" alt="">
+      </span>
+        <span id="undo-1" class='adjust-icon'>
+          <img class="adjust-img" src="./undo.png" alt="">
+        </span>
+      </div>
+      <div id='adjust-2'>
+        <span id="refresh-2" class='adjust-icon'>
+          <img class="adjust-img" src="./refresh.png" alt="">
+        </span>
+        <span id="bag_in-2" class='adjust-icon'>
+          <img class="adjust-img" src="./bag-in.png" alt="">
+        </span>
+      <span id="bag_on-2" class='adjust-icon'>
+        <img class="adjust-img" src="./bag-on.png" alt="">
+      </span>
+        <span id="undo-2" class='adjust-icon'>
+          <img class="adjust-img" src="./undo.png" alt="">
+        </span>
+      </div>
+      <p id='score-1'>0</p>
+      <p id='score-2'>0</p>
+    </section>
+
+    <script type="text/javascript" src="./main.js">
+
+    </script>
+  </body>
+</html>
