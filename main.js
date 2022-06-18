@@ -1,6 +1,7 @@
 let adjustIcons = document.querySelectorAll('.adjust-icon');
 const score_1 = document.querySelector('#score-1');
 const score_2 = document.querySelector('#score-2');
+const scorePlayTo = document.querySelector('#header-play-to');
 let scoreAdjustments = {
   player_1: [],
   player_2: []
@@ -14,6 +15,7 @@ adjustIcons.forEach(icon => {
     switch (userAction) {
       case 'refresh':
         scoreToUpdate.innerText = 0;
+        scoreAdjustments[`player_${playerNumber}`] = [];
         break;
       case 'undo':
         if (scoreAdjustments[`player_${playerNumber}`].length > 0) {

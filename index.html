@@ -21,10 +21,30 @@
         border-right: 2px solid black;
       }
       header {
-        font-size: calc(100vw / 18);
         padding: 0.25rem 0;
+        display: flex;
+        border-bottom: 2px solid black;
+      }
+      header > * {
         background-color: black;
+        font-size: calc(100vw / 30);
+      }
+      #header-text {
+        height: 100%;
+        margin: 0 auto;
+        flex: auto;
         color: white;
+      }
+      #header-play-to {
+        margin: 0 auto;
+        padding: 0;
+        outline: none;
+        font-family: 'Kdam Thmor Pro', sans-serif;
+        width: 3em;
+        border: none;
+        border-left: 1px solid white;
+        text-align: center;
+        color: lightgreen;
       }
       #battle-holder {
         display: grid;
@@ -69,8 +89,15 @@
       }
       #score-1, #score-2 {
         text-align: center;
-        font-size: 250px;
+        font-size: 10em;
         margin: 0 auto;
+        width: 100%;
+      }
+      #score-1 {
+        border-right: 1px solid black;
+      }
+      #score-2 {
+        border-left: 1px solid black;
       }
       .adjust-img {
         width: 100%;
@@ -79,7 +106,10 @@
   </head>
   <body>
 
-    <header>Battle Bags</header>
+    <header>
+      <span id='header-text'>Battle Bags</span>
+      <input type="number" id='header-play-to' maxlength="3" min=1 max=99 value=10></input>
+    </header>
 
     <section id='battle-holder'>
       <input id='player-1' type="text" name="" placeholder="Player 1">
